@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Analytical Geometry Visualizer</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Line and Plane Intersection</h1>
+    <div class="input-group">
+        <label>Plane (LaTeX):</label>
+        <input type="text" id="plane" placeholder="ax+by+cz+d=0">
+    </div>
+    <div class="input-group">
+        <label>Line x(t):</label>
+        <input type="text" id="line_x" placeholder="x=...">
+        <button onclick="insert('line_x','x=')">x=</button>
+    </div>
+    <div class="input-group">
+        <label>Line y(t):</label>
+        <input type="text" id="line_y" placeholder="y=...">
+        <button onclick="insert('line_y','y=')">y=</button>
+    </div>
+    <div class="input-group">
+        <label>Line z(t):</label>
+        <input type="text" id="line_z" placeholder="z=...">
+        <button onclick="insert('line_z','z=')">z=</button>
+    </div>
+    <button id="solve">Solve</button>
+    <div id="steps"></div>
+    <img id="plot" />
+</div>
+<script src="/static/script.js"></script>
+</body>
+</html>
